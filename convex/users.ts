@@ -8,6 +8,7 @@ export const createUser = internalMutation({
     async handler(ctx, args) {
         await ctx.db.insert("users", {
             tokenIdentifier: args.tokenIdentifier,
+            orgIds: [],
         })
     },
 })
